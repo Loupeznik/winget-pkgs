@@ -1,0 +1,26 @@
+﻿# yaml-language-server: $schema=https://aka.ms/winget-manifest.installer.1.0.0.schema.json
+PackageIdentifier: RomainBourdon.Wampserver
+PackageVersion: 3.2.3
+MinimumOSVersion: 10.0.0.0
+Dependencies:
+  PackageDependencies:
+    - PackageIdentifier: Microsoft.VC++2015-2019Redist-x86
+      MinimumVersion: 14.28.29914.0
+    - PackageIdentifier: Microsoft.VC++2012Redist-x86
+      MinimumVersion: 11.0.61030
+InstallModes:
+  - interactive
+  - silent
+  - silentWithProgress
+Installers:
+  - Architecture: x64
+    InstallerType: exe
+    InstallerUrl: https://wampserver.aviatechno.net/files/install/wampserver3.2.3_x64.exe
+    InstallerSha256: 4749AAA7D13187656AC7E057ADA5D6E7C0FF40D56D573B0B6B0E8E11AD44A76A
+    InstallerSwitches:
+      Silent: /VERYSILENT /SUPPRESSMSGBOXE
+      SilentWithProgress: /VERYSILENT /SUPPRESSMSGBOXE
+    InstallerLocale: en-US
+    UpgradeBehavior: install
+ManifestType: installer
+ManifestVersion: 1.0.0
